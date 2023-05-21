@@ -7,12 +7,11 @@
     "main": "dist/index.js",
     "scripts": {
         "build": "npx tsc",
-        "test": "npx jest --passWithNoTests"
+        "test": "npx vitest run"
     },
     "devDependencies": {
-        "@types/jest": "^29.5.1",
-        "ts-jest": "^29.1.0",
-        "typescript": "^5.0.4"
+        "typescript": "^5.0.4",
+        "vitest": "^0.31.1"
     },
     "homepage": "https://github.com/RideTracker/AvatarClient#readme",
     "repository": {

@@ -22,7 +22,7 @@ export type GetAvatarsResponse = DefaultResponse & {
 };
 
 export default async function getAvatars(client: Client): Promise<GetAvatarsResponse> {
-    const url = new URL("/api/avatars", client.host);
+    const url = new URL(`${client.host}/api/avatars`);
 
     return client.request("GET", url);
 };
