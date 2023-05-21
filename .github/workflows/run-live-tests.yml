@@ -33,6 +33,6 @@ jobs:
         
       - name: Run endpoint tests
         env:
-          VITEST_AVATAR_API: ${{ secrets.VITEST_AVATAR_API }}
+          VITEST_AVATAR_API: ${{ vars.VITEST_AVATAR_API }}
           VITEST_SERVICE_TOKEN: ${{ secrets.VITEST_SERVICE_TOKEN }}
         run: npm test
