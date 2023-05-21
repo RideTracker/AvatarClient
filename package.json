@@ -1,0 +1,28 @@
+{
+    "name": "@ridetracker/avatarclient",
+    "description": "A TypeScript package to provide a low-level API client for the AvatarService.",
+    "version": "0.9.0",
+    "author": "Nora Söderlund",
+    "license": "UNLICENSED",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "npx tsc",
+        "test": "npx jest --passWithNoTests"
+    },
+    "devDependencies": {
+        "@types/jest": "^29.5.1",
+        "ts-jest": "^29.1.0",
+        "typescript": "^5.0.4"
+    },
+    "homepage": "https://github.com/RideTracker/AvatarClient#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RideTracker/AvatarClient.git"
+    },
+    "bugs": {
+        "url": "https://github.com/RideTracker/AvatarClient/issues"
+    },
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com"
+    }
+}
