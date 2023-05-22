@@ -1,4 +1,4 @@
-import { Method } from "./models/RequestMethod";
+import { Method } from "./models/Method";
 
 import ping from "./controllers/ping";
 
