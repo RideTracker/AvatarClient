@@ -5,14 +5,8 @@ export type CreateAvatarResponse = DefaultResponse & {
         id: string;
         name: string;
         type: string;
-        image: string;
     };
-    existingAvatar?: {
-        image: string;
-        images: {
-            image: string;
-        };
-    };
+    uploadUrl: string;
 };
-export default function createAvatar(client: Client, name: string, type: string, image: string): Promise<CreateAvatarResponse>;
+export default function createAvatar(client: Client, name: string, type: string): Promise<CreateAvatarResponse>;
 //# sourceMappingURL=createAvatar.d.ts.map

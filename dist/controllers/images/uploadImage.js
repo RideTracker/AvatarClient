@@ -9,15 +9,18 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-function createAvatar(client, name, type) {
+function uploadImage(url, name, type, buffer) {
     return __awaiter(this, void 0, void 0, function* () {
-        const url = new URL(`${client.host}/api/avatars`);
-        const body = {
-            name,
-            type
-        };
-        return client.request("POST", url, undefined, JSON.stringify(body));
+        const uint8Array = new Uint8Array(buffer);
+        const blob = new Blob([uint8Array], { type });
+        const body = new FormData();
+        body.append("file", blob, name);
+        const response = yield fetch(url, {
+            method: "POST",
+            body
+        });
+        return yield response.json();
     });
 }
-exports.default = createAvatar;
+exports.default = uploadImage;
 ;

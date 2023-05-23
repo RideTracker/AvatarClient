@@ -6,25 +6,17 @@ export type CreateAvatarResponse = DefaultResponse & {
         id: string;
         name: string;
         type: string;
-        image: string;
     };
 
-    existingAvatar?: {
-        image: string;
-
-        images: {
-            image: string;
-        };
-    };
+    uploadUrl: string;
 };
 
-export default async function createAvatar(client: Client, name: string, type: string, image: string): Promise<CreateAvatarResponse> {
+export default async function createAvatar(client: Client, name: string, type: string): Promise<CreateAvatarResponse> {
     const url = new URL(`${client.host}/api/avatars`);
 
     const body = {
         name,
-        type,
-        image
+        type
     };
 
     return client.request("POST", url, undefined, JSON.stringify(body));
