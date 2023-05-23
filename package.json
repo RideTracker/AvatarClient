@@ -1,7 +1,7 @@
 {
     "name": "@ridetracker/avatarclient",
     "description": "A TypeScript package to provide a low-level API client for the AvatarService.",
-    "version": "0.9.3",
+    "version": "0.9.4",
     "author": "Nora Söderlund",
     "license": "UNLICENSED",
     "main": "dist/index.js",

@@ -12,9 +12,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.createAvatarColor = exports.createAvatarImage = exports.createAvatar = exports.getAvatars = exports.ping = void 0;
+exports.createAvatarColor = exports.createAvatarImage = exports.createAvatar = exports.getAvatars = exports.uploadImage = exports.ping = void 0;
 const ping_1 = __importDefault(require("./controllers/ping"));
 exports.ping = ping_1.default;
+const uploadImage_1 = __importDefault(require("./controllers/images/uploadImage"));
+exports.uploadImage = uploadImage_1.default;
 const getAvatars_1 = __importDefault(require("./controllers/avatars/getAvatars"));
 exports.getAvatars = getAvatars_1.default;
 const createAvatar_1 = __importDefault(require("./controllers/avatars/createAvatar"));

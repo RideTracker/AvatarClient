@@ -12,7 +12,7 @@ export type CreateAvatarImageResponse = DefaultResponse & {
 };
 
 export default async function createAvatarImage(client: Client, avatarId: string, index: number, colorType?: string): Promise<CreateAvatarImageResponse> {
-    const url = new URL(`/api/avatars/${avatarId}/color`, client.host);
+    const url = new URL(`/api/avatars/${avatarId}/image`, client.host);
 
     const body = {
         index,
