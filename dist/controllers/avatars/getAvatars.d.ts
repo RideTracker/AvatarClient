@@ -17,5 +17,5 @@ export type GetAvatarsResponse = DefaultResponse & {
         }[];
     }[];
 };
-export default function getAvatars(client: Client): Promise<GetAvatarsResponse>;
+export declare function getAvatars(client: Client): Promise<GetAvatarsResponse>;
 //# sourceMappingURL=getAvatars.d.ts.map

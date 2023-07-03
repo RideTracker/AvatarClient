@@ -14,5 +14,5 @@ export type UploadImageResponse = {
     }[];
     success: boolean;
 };
-export default function uploadImage(url: string, name: string, type: string, buffer: Buffer): Promise<UploadImageResponse>;
+export declare function uploadImage(url: string, name: string, type: string, buffer: Buffer): Promise<UploadImageResponse>;
 //# sourceMappingURL=uploadImage.d.ts.map

@@ -11,7 +11,7 @@ export type CreateAvatarImageResponse = DefaultResponse & {
     uploadUrl: string;
 };
 
-export default async function createAvatarImage(client: Client, avatarId: string, index: number, colorType?: string): Promise<CreateAvatarImageResponse> {
+export async function createAvatarImage(client: Client, avatarId: string, index: number, colorType?: string): Promise<CreateAvatarImageResponse> {
     const url = new URL(`/api/avatars/${avatarId}/image`, client.host);
 
     const body = {

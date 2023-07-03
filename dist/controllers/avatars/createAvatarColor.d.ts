@@ -10,5 +10,5 @@ export type CreateAvatarColorResponse = DefaultResponse & {
         };
     };
 };
-export default function createAvatarColor(client: Client, avatarId: string, type: string, index: number, defaultColor?: string): Promise<CreateAvatarColorResponse>;
+export declare function createAvatarColor(client: Client, avatarId: string, type: string, index: number, defaultColor?: string): Promise<CreateAvatarColorResponse>;
 //# sourceMappingURL=createAvatarColor.d.ts.map

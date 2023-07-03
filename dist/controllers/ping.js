@@ -9,11 +9,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ping = void 0;
 function ping(client) {
     return __awaiter(this, void 0, void 0, function* () {
         const url = new URL(`${client.host}/api/ping`);
         return client.request("GET", url);
     });
 }
-exports.default = ping;
+exports.ping = ping;
 ;

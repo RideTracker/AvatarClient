@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.uploadImage = void 0;
 function uploadImage(url, name, type, buffer) {
     return __awaiter(this, void 0, void 0, function* () {
         const uint8Array = new Uint8Array(buffer);
@@ -22,5 +23,5 @@ function uploadImage(url, name, type, buffer) {
         return yield response.json();
     });
 }
-exports.default = uploadImage;
+exports.uploadImage = uploadImage;
 ;

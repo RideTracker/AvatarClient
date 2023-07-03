@@ -17,7 +17,7 @@ export type UploadImageResponse = {
     success: boolean;
 };
 
-export default async function uploadImage(url: string, name: string, type: string, buffer: Buffer): Promise<UploadImageResponse> {
+export async function uploadImage(url: string, name: string, type: string, buffer: Buffer): Promise<UploadImageResponse> {
     const uint8Array = new Uint8Array(buffer);
     const blob = new Blob([ uint8Array ], { type });
 

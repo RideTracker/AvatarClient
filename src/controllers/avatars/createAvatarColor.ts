@@ -12,7 +12,7 @@ export type CreateAvatarColorResponse = DefaultResponse & {
     };
 };
 
-export default async function createAvatarColor(client: Client, avatarId: string, type: string, index: number, defaultColor?: string): Promise<CreateAvatarColorResponse> {
+export async function createAvatarColor(client: Client, avatarId: string, type: string, index: number, defaultColor?: string): Promise<CreateAvatarColorResponse> {
     const url = new URL(`/api/avatars/${avatarId}/color`, client.host);
 
     const body = {

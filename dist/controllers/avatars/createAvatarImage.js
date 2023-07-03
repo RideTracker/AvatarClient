@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.createAvatarImage = void 0;
 function createAvatarImage(client, avatarId, index, colorType) {
     return __awaiter(this, void 0, void 0, function* () {
         const url = new URL(`/api/avatars/${avatarId}/image`, client.host);
@@ -19,5 +20,5 @@ function createAvatarImage(client, avatarId, index, colorType) {
         return client.request("POST", url, undefined, JSON.stringify(body));
     });
 }
-exports.default = createAvatarImage;
+exports.createAvatarImage = createAvatarImage;
 ;
