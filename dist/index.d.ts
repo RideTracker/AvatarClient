@@ -1,9 +1,10 @@
 import { ClientToken } from "./models/ClientToken";
 import { Method } from "./models/Method";
 export default class Client {
+    userAgent: string;
     host: string;
     token?: ClientToken;
-    constructor(host: string, token?: ClientToken);
+    constructor(userAgent: string, host: string, token?: ClientToken);
     request(method: Method, url: URL, initialHeaders?: Record<string, string>, body?: BodyInit | undefined): Promise<any>;
 }
 export * from "./controllers/ping";

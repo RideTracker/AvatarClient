@@ -2,10 +2,14 @@ import { ClientToken } from "./models/ClientToken";
 import { Method } from "./models/Method";
 
 export default class Client {
+    userAgent: string;
+
     host: string;
     token?: ClientToken;
 
-    constructor(host: string, token?: ClientToken) {
+    constructor(userAgent: string, host: string, token?: ClientToken) {
+        this.userAgent = userAgent;
+        
         this.host = host;
         this.token = token;
     };
@@ -14,6 +18,8 @@ export default class Client {
         const headers: Record<string, string> = {
             ...initialHeaders
         };
+
+        headers["User-Agent"] = this.userAgent;
 
         if(this.token)
             headers["Authorization"] = `Basic ${this.token.email}:${this.token.key}`;

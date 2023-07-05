@@ -24,7 +24,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 class Client {
-    constructor(host, token) {
+    constructor(userAgent, host, token) {
+        this.userAgent = userAgent;
         this.host = host;
         this.token = token;
     }
@@ -32,6 +33,7 @@ class Client {
     request(method, url, initialHeaders, body) {
         return __awaiter(this, void 0, void 0, function* () {
             const headers = Object.assign({}, initialHeaders);
+            headers["User-Agent"] = this.userAgent;
             if (this.token)
                 headers["Authorization"] = `Basic ${this.token.email}:${this.token.key}`;
             if (body)
