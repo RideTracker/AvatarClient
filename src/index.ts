@@ -1,10 +1,11 @@
+import { ClientToken } from "./models/ClientToken";
 import { Method } from "./models/Method";
 
 export default class Client {
     host: string;
-    token?: string;
+    token?: ClientToken;
 
-    constructor(host: string, token?: string) {
+    constructor(host: string, token?: ClientToken) {
         this.host = host;
         this.token = token;
     };
@@ -15,7 +16,7 @@ export default class Client {
         };
 
         if(this.token)
-            headers["Authorization"] = `Bearer ${this.token}`;
+            headers["Authorization"] = `Basic ${this.token.email}:${this.token.key}`;
 
         if(body)
             headers["Content-Type"] = "application/json";

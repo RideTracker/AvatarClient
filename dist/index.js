@@ -33,7 +33,7 @@ class Client {
         return __awaiter(this, void 0, void 0, function* () {
             const headers = Object.assign({}, initialHeaders);
             if (this.token)
-                headers["Authorization"] = `Bearer ${this.token}`;
+                headers["Authorization"] = `Basic ${this.token.email}:${this.token.key}`;
             if (body)
                 headers["Content-Type"] = "application/json";
             const response = yield fetch(url.toString(), {
