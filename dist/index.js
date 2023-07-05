@@ -57,3 +57,5 @@ __exportStar(require("./controllers/avatars/getAvatars"), exports);
 __exportStar(require("./controllers/avatars/createAvatar"), exports);
 __exportStar(require("./controllers/avatars/createAvatarImage"), exports);
 __exportStar(require("./controllers/avatars/createAvatarColor"), exports);
+__exportStar(require("./controllers/user/avatars/getUserAvatars"), exports);
+__exportStar(require("./controllers/user/avatars/createUserAvatar"), exports);

@@ -44,3 +44,6 @@ export * from "./controllers/avatars/getAvatars";
 export * from "./controllers/avatars/createAvatar";
 export * from "./controllers/avatars/createAvatarImage";
 export * from "./controllers/avatars/createAvatarColor";
+
+export * from "./controllers/user/avatars/getUserAvatars";
+export * from "./controllers/user/avatars/createUserAvatar";
